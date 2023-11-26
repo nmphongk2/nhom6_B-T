@@ -26,11 +26,7 @@ function khach_hang_selectall()
     $sql = "SELECT * FROM khach_hang";
     return pdo_query($sql);
 }
-function khach_hang_select_by_id($ma_kh)
-{
-    $sql = "SELECT * FROM khach_hang WHERE ma_kh=?";
-    return pdo_query_one($sql, $ma_kh);
-}
+
 function khach_hang_exist($ma_kh)
 {
     $sql = "SELECT count(*) FROM khach_hang WHERE ma_kh=?";
