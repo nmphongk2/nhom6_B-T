@@ -67,21 +67,35 @@ if (isset($_SESSION['total_cart'])) {
                         <i class="fa fa-user primary-color"></i>
                         <?php }  ?>
                     </a>
-                    <div class="text">
-                        <span class="text-dark">Xin chào!</span>
-                        <?php
-                        if (isset($_SESSION['user'])) { ?>
-                        <div class="text-dark text-info"><?= $_SESSION['user']['ten_kh'] ?></div>
-                        <?php } else { ?>
+      <div class="text">
+          <span class="text-dark">Xin chào!</span>
+          <?php
+          if (isset($_SESSION['user'])) {
+              $user = $_SESSION['user'];
 
-                        <a href="<?= $SITE_URL . '/tai-khoan/dang-nhap.php' ?>" class="d-block text-info">Đăng nhập</a>
+              // Kiểm tra loại người dùng (nếu có)
+              if (isset($user['ten_kh'])) {
+                  // Nếu là khách hàng
+                  $ten_nguoi_dung = $user['ten_kh'];
+              } elseif (isset($user['ten_nv'])) {
+                  // Nếu là nhân viên
+                  $ten_nguoi_dung = $user['ten_nv'];
+              } else {
+                  // Trường hợp khác (nếu có)
+                  $ten_nguoi_dung = "Không xác định";
+              }
+
+              echo '<div class="text-dark text-info">' . $ten_nguoi_dung . '</div>';
+          } else { ?>
+
+              <a href="<?= $SITE_URL . '/tai-khoan/dang-nhap.php' ?>" class="d-block text-info">Đăng nhập</a>
                      
                         <?php }  ?>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                             <?php
                             if (isset($_SESSION['user'])) { ?>
 
-                            <?php if ($_SESSION['user']['vai_tro'] == 1) { ?>
+                                <?php if ($_SESSION['user']['vai_tro_id'] == 1) { ?>
                             <a class="dropdown-item pl-3 py-2" href="<?= $ADMIN_URL . "/trang-chinh/" ?>">Quản trị
                                 admin</a>
                             <?php }  ?>
