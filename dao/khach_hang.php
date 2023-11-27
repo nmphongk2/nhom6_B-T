@@ -10,6 +10,12 @@ function khach_hang_update($ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat
     $sql = "UPDATE khach_hang SET mat_khau=?,ten_kh=?,email=?,hinh=?,kich_hoat=?,vai_tro=? WHERE ma_kh=?";
     pdo_execute($sql, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat == 1, $vai_tro == 1, $ma_kh);
 }
+
+function khach_hang_select_by_id($ma_kh)
+{
+    $sql = "SELECT * FROM khach_hang WHERE ma_kh=?";
+    return pdo_query_one($sql, $ma_kh);
+}
 function khach_hang_delete($ma_kh)
 {
     $sql = "DELETE FROM khach_hang WHERE ma_kh=?";

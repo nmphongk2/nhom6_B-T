@@ -95,12 +95,13 @@ if (isset($_SESSION['total_cart'])) {
                             <?php
                             if (isset($_SESSION['user'])) { ?>
 
-                                <?php if ($_SESSION['user']['vai_tro_id'] == 1) { ?>
-                            <a class="dropdown-item pl-3 py-2" href="<?= $ADMIN_URL . "/trang-chinh/" ?>">Quản trị
-                                admin</a>
-                            <?php }  ?>
+                                <?php if (isset($_SESSION['user']['vai_tro_id']) && $_SESSION['user']['vai_tro_id'] != 0) { ?>
+                                    <a class="dropdown-item pl-3 py-2" href="<?= $ADMIN_URL . "/trang-chinh/" ?>">Quản
+                                        trị admin</a>
+                                <?php } ?>
 
-                            <a class="dropdown-item pl-3 py-2"
+
+                                <a class="dropdown-item pl-3 py-2"
                                 href="<?= $SITE_URL . '/tai-khoan/cap-nhat-tk.php' ?>">Cập nhật tài khoản</a>
                             <a class="dropdown-item pl-3 py-2" href="<?= $SITE_URL . '/tai-khoan/doi-mkhau.php' ?>">Đổi mật
                                 khẩu</a>
