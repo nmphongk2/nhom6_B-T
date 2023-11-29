@@ -1,11 +1,5 @@
 ﻿
-<?php
-if ($hang['don_gia'] > 0) {
-    $percent_discount = number_format($hang['giam_gia'] / $hang['don_gia'] * 100);
-} else {
-    $percent_discount = 0;
-}
-?>
+
 
     <!-- Add your site or application content here -->
  
@@ -117,10 +111,10 @@ if ($hang['don_gia'] > 0) {
 
                                     <div class="content_price mb-15">
                                         <span>
-                                        <?= number_format($hang['don_gia'] - $hang['giam_gia'], 0, ',') ?> VNĐ
+                                        <?= number_format($hang['don_gia']) ?> VNĐ
                                         </span>
                                         <span class="old-price">
-                                        <?= number_format($hang['don_gia'], 0, ',') ?> VNĐ
+
                                         </span>
                                     </div>
                                     <div class="box_quantity mb-20">

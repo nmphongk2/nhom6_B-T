@@ -16,20 +16,28 @@ if (exist_param("btn_register")) {
         $MESSAGE = "Mật khẩu phải trùng nhau";
     } elseif (khach_hang_exist($ma_kh)) {
         $MESSAGE = "Tên đăng nhập đã tồn tại";
+    } elseif (khach_hang_exist($email)) {
+        $MESSAGE = "Email đã tồn tại";
     } else {
-        $mat_khau_md5 = md5($mat_khau); // Mã hóa mật khẩu bằng MD5
+        $mat_khau = md5($mat_khau); // Mã hóa mật khẩu bằng MD5
         $file_name = save_file("up_hinh", "$UPLOAD_URL/users/");
         $hinh = $file_name ? $file_name : "";
+
+        // Đặt vai_tro_id mặc định là 0
+        $vai_tro_id = 0;
+        // Đặt vai_tro_id mặc định là 0
+        $sdt = 0;
+
         try {
-            khach_hang_insert($ma_kh, $mat_khau_md5, $ten_kh, $email, $hinh, $kich_hoat, $vai_tro);
+            khach_hang_insert($ma_kh, $mat_khau, $ten_kh, $ngay_sinh, $dia_chi, $email, $hinh, $sdt, $kich_hoat, $vai_tro_id);
             $MESSAGE = "Đăng ký thành viên thành công!";
             $VIEW_NAME = "dang-nhap-form.php";
         } catch (Exception $exc) {
-            $MESSAGE = "Đăng ký thành viên thất bại!";
+            $MESSAGE = "Đăng ký thành viên thất bại! Lỗi: " . $exc->getMessage();
         }
     }
 } else {
-    global $ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat, $mat_khau2;
+    global $ma_kh, $mat_khau, $ten_kh, $email, $hinh, $sdt, $kich_hoat, $mat_khau2;
     $VIEW_NAME = "tai-khoan/dang-ky-form.php";
 }
 

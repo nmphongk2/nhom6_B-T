@@ -1,14 +1,15 @@
 <?php
 require_once 'pdo.php';
-function khach_hang_insert($ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat, $vai_tro)
+function khach_hang_insert($ma_kh, $mat_khau, $ten_kh, $ngay_sinh, $dia_chi, $email, $hinh, $sdt, $kich_hoat, $vai_tro_id)
 {
-    $sql = "INSERT INTO khach_hang(ma_kh,mat_khau,ten_kh,email,hinh,kich_hoat,vai_tro) VALUES(?,?,?,?,?,?,?)";
-    pdo_execute($sql, $ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat == 1, $vai_tro == 1);
+    $sql = "INSERT INTO khach_hang(ma_kh,mat_khau,ten_kh,ngay_sinh,dia_chi,email,hinh,sdt,kich_hoat,vai_tro_id) VALUES(?,?,?,?,?,?,?,?,?,?)";
+    pdo_execute($sql, $ma_kh, $mat_khau, $ten_kh, $ngay_sinh, $dia_chi == 'ko', $email, $hinh, $sdt == 0, $kich_hoat == 1, $vai_tro_id);
 }
-function khach_hang_update($ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat, $vai_tro)
+
+function khach_hang_update($ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat, $vai_tro_id)
 {
-    $sql = "UPDATE khach_hang SET mat_khau=?,ten_kh=?,email=?,hinh=?,kich_hoat=?,vai_tro=? WHERE ma_kh=?";
-    pdo_execute($sql, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat == 1, $vai_tro == 1, $ma_kh);
+    $sql = "UPDATE khach_hang SET mat_khau=?,ten_kh=?,email=?,hinh=?,kich_hoat=?,vai_tro_id=? WHERE ma_kh=?";
+    pdo_execute($sql, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat == 1, $vai_tro_id == 0, $ma_kh);
 }
 
 function khach_hang_select_by_id($ma_kh)
