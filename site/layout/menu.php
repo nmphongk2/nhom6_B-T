@@ -53,7 +53,7 @@ if (isset($_SESSION['total_cart'])) {
                                                     <li><a href="contact.php" title="Contact">Hỗ Trợ</a></li>
                                                     <li><a href="wishlist.php" title="wishlist">Yêu Thích</a></li>
                                                
-                                                 <li><a href="giohang.php" title="My cart">Giỏ Hàng</a></li>
+                                                 <li><a href="./trang-chinh/gio-hang.php" title="My cart">Giỏ Hàng</a></li>
 <li><a href="../tai-khoan/khach-hang.php" title="My account">Tài Khoản</a></li>
   <!-- User -->
   <div class="dropdown widget-header icontext">
