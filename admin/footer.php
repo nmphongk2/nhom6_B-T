@@ -1,7 +1,7 @@
 <!-- footer -->
 <!-- ============================================================== -->
 <footer class="footer text-center">
-    Copyright &copy; by Nguyễn Minh Phong
+    Copyright &copy; by Nhóm 6 - WD18306
 </footer>
 <!-- ============================================================== -->
 <!-- End footer -->
