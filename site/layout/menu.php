@@ -226,7 +226,7 @@ if (isset($_SESSION['total_cart'])) {
                                                             
                                                             </li>
                                                             <li <?= $name_page == 'Hang_cu' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/shop-fullwidth.php">Hàng Cũ</a></li>
-                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/shop-fullwidth.php">Liên Hệ</a></li>
+                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/trang-chinh/lien-he.php">Liên Hệ</a></li>
                                                              
                                                             </li>
                                                            
