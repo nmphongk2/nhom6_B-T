@@ -6,11 +6,7 @@ require '../../dao/khach_hang.php';
 check_login();
 
 extract($_REQUEST);
-function nhan_vien_select_by_id($ma_nv)
-{
-    $sql = "SELECT * FROM nhan_vien WHERE $ma_nv=?";
-    return pdo_query_one($sql, $ma_nv);
-}
+
 if (exist_param("btn_update")) {
     $file_name = save_file("up_hinh", "$UPLOAD_URL/users/");
     $hinh = $file_name ? $file_name : $hinh;

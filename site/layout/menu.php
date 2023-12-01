@@ -54,7 +54,8 @@ if (isset($_SESSION['total_cart'])) {
                                                     <li><a href="wishlist.php" title="wishlist">Yêu Thích</a></li>
                                                
                                                  <li><a href="./trang-chinh/gio-hang.php" title="My cart">Giỏ Hàng</a></li>
-<li><a href="../tai-khoan/khach-hang.php" title="My account">Tài Khoản</a></li>
+                                                    <li><a href="../tai-khoan/thong-tin.php" title="My account">Tài
+                                                            Khoản</a></li>
   <!-- User -->
   <div class="dropdown widget-header icontext">
                     <a href="#" class="icon icon-sm rounded-circle border" id="dropdownMenu1" data-toggle="dropdown"

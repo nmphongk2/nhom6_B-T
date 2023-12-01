@@ -23,7 +23,7 @@ function khach_hang_select_by_vt($ma_nv)
 {
     $sql = "SELECT khach_hang.*, vai_tro.ten_VT AS ten_VT
             FROM khach_hang
-            JOIN vai_tro ON khach_hang.vai_tro_id = vai_tro.vai_tro_id
+            JOIN vai_tro ON khach_hang.vai_tro_id = vai_tro.vai_tro_id 
             WHERE khach_hang.ma_kh=?";
     return pdo_query_one($sql, $ma_nv);
 }
