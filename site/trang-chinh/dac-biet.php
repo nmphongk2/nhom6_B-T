@@ -43,7 +43,7 @@
                                 </div>
 
                                 <div class="product_content">
-                                    <span class="product_price"><?= number_format($hang['don_gia'] - $hang['giam_gia'], 0, ',') ?> VNĐ</span>
+                                    <?= number_format($hang['don_gia']) ?> VNĐ
                                     <h3 class="product_title"><a href="single-product.html"><?= $hang['ten_hh'] ?></a></h3>
                                     <p class="product_title"><a href="single-product.html"><?= substr($hang['mo_ta'], 0, 130) ?></a></p>
                                 </div>

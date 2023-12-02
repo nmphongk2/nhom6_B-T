@@ -53,8 +53,9 @@ if (isset($_SESSION['total_cart'])) {
                                                     <li><a href="contact.php" title="Contact">Hỗ Trợ</a></li>
                                                     <li><a href="wishlist.php" title="wishlist">Yêu Thích</a></li>
                                                
-                                                 <li><a href="giohang.php" title="My cart">Giỏ Hàng</a></li>
-<li><a href="../tai-khoan/khach-hang.php" title="My account">Tài Khoản</a></li>
+                                                 <li><a href="./trang-chinh/gio-hang.php" title="My cart">Giỏ Hàng</a></li>
+                                                    <li><a href="../tai-khoan/thong-tin.php" title="My account">Tài
+                                                            Khoản</a></li>
   <!-- User -->
   <div class="dropdown widget-header icontext">
                     <a href="#" class="icon icon-sm rounded-circle border" id="dropdownMenu1" data-toggle="dropdown"
@@ -95,12 +96,13 @@ if (isset($_SESSION['total_cart'])) {
                             <?php
                             if (isset($_SESSION['user'])) { ?>
 
-                                <?php if ($_SESSION['user']['vai_tro_id'] == 1) { ?>
-                            <a class="dropdown-item pl-3 py-2" href="<?= $ADMIN_URL . "/trang-chinh/" ?>">Quản trị
-                                admin</a>
-                            <?php }  ?>
+                                <?php if (isset($_SESSION['user']['vai_tro_id']) && $_SESSION['user']['vai_tro_id'] != 0) { ?>
+                                    <a class="dropdown-item pl-3 py-2" href="<?= $ADMIN_URL . "/trang-chinh/" ?>">Quản
+                                        trị admin</a>
+                                <?php } ?>
 
-                            <a class="dropdown-item pl-3 py-2"
+
+                                <a class="dropdown-item pl-3 py-2"
                                 href="<?= $SITE_URL . '/tai-khoan/cap-nhat-tk.php' ?>">Cập nhật tài khoản</a>
                             <a class="dropdown-item pl-3 py-2" href="<?= $SITE_URL . '/tai-khoan/doi-mkhau.php' ?>">Đổi mật
                                 khẩu</a>
@@ -226,7 +228,7 @@ if (isset($_SESSION['total_cart'])) {
                                                             
                                                             </li>
                                                             <li <?= $name_page == 'Hang_cu' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/shop-fullwidth.php">Hàng Cũ</a></li>
-                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/shop-fullwidth.php">Liên Hệ</a></li>
+                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/trang-chinh/lien-he.php">Liên Hệ</a></li>
                                                              
                                                             </li>
                                                            

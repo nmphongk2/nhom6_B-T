@@ -19,19 +19,22 @@ function nhan_vien_select_by_vt($ma_nv)
     return pdo_query_one($sql, $ma_nv);
 }
 
-
-function khach_hang_select_by_id($ma_kh)
+function khach_hang_select_by_vt($ma_nv)
 {
-    $sql = "SELECT * FROM khach_hang WHERE ma_kh=?";
-    return pdo_query_one($sql, $ma_kh);
+    $sql = "SELECT khach_hang.*, vai_tro.ten_VT AS ten_VT
+            FROM khach_hang
+            JOIN vai_tro ON khach_hang.vai_tro_id = vai_tro.vai_tro_id 
+            WHERE khach_hang.ma_kh=?";
+    return pdo_query_one($sql, $ma_nv);
 }
 
+
 if (exist_param("btn_login")) {
-    $user = nhan_vien_select_by_id($ma_kh); // Thử đăng nhập như là nhân viên trước
+    $user = nhan_vien_select_by_vt($ma_kh); // Thử đăng nhập như là nhân viên trước
 
     if (!$user) {
         // Nếu không phải nhân viên, thử đăng nhập như là khách hàng
-        $user = khach_hang_select_by_id($ma_kh);
+        $user = khach_hang_select_by_vt($ma_kh);
     }
 
     if ($user) {

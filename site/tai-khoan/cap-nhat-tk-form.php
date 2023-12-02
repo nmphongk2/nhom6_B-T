@@ -28,6 +28,8 @@
                     <input type="text" name="email" id="" class="form-control" value="<?= $email ?>"
                         aria-describedby="helpId">
                 </div>
+
+
                 <div class="form-group">
                     <label for="">Ảnh đại diện</label>
                     <input type="file" name="up_hinh" id="" class="form-control" aria-describedby="helpId">
@@ -38,6 +40,14 @@
 
                 </div>
 
+                <!--                <div class="form-group">-->
+                <!--                    <select class="custom-select custom-select-lg mb-8" name="gioi_tinh">-->
+                <!--                        <option selected>Giới Tính</option>-->
+                <!--                        <option value="Nam">Nam</option>-->
+                <!--                        <option value="Nữ">Nữ</option>-->
+                <!--                    </select>-->
+                <!--                </div>-->
+                <hr>
                 <input name="vai_tro" value="<?= $vai_tro ?>" type="hidden">
                 <input name="kich_hoat" value="<?= $kich_hoat ?>" type="hidden">
                 <input name="mat_khau" value="<?= $mat_khau ?>" type="hidden">
@@ -46,7 +56,7 @@
                     <button type="submit" name="btn_update" class="btn btn-success btn-block">Cập nhật</button>
                 </div>
             </form>
-        </div>
+            </form>
 
 
     </div>

@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!-- ============================ COMPONENT LOGIN   ================================= -->
 <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
     <div class="card-body">
@@ -61,6 +65,8 @@
  
   <meta name="google-signin-client_id" content="963908178951-dvi2bcd563fa6pm3rjegc8rduee2cg3g.apps.googleusercontent.com">
 </head>
+
+
 <body>
 
 </body>

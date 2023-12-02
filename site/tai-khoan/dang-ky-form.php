@@ -33,6 +33,12 @@
                  </div> <!-- form-group end.// -->
              </div> <!-- form-row end.// -->
              <div class="form-row">
+                 <div class="col form-group">
+                     <label>Năm Sinh</label>
+                     <input type="date" class="form-control" name="ngay_sinh">
+                 </div> <!-- form-group end.// -->
+             </div> <!-- form-row end.// -->
+             <div class="form-row">
                  <div class="form-group col-md-6">
                      <label>Tạo mật khẩu</label>
                      <input class="form-control" type="password" name="mat_khau" id="mat_khau">
@@ -47,7 +53,7 @@
                  <button type="submit" name="btn_register" class="btn btn-success  btn-block"> Đăng ký </button>
              </div> <!-- form-group// -->
              <input type="hidden" name="kich_hoat" value="1">
-             <input type="hidden" name="vai_tro" value="0">
+             <input type="hidden" name="vai_tro-id" value="0">
 
              <i class=" text-danger"><?= (isset($MESSAGE) && (strlen($MESSAGE) > 0)) ? $MESSAGE : "" ?></i>
          </form>

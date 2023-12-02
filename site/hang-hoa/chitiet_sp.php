@@ -1,11 +1,5 @@
 ﻿
-<?php
-if ($hang['don_gia'] > 0) {
-    $percent_discount = number_format($hang['giam_gia'] / $hang['don_gia'] * 100);
-} else {
-    $percent_discount = 0;
-}
-?>
+
 
     <!-- Add your site or application content here -->
  
@@ -117,10 +111,10 @@ if ($hang['don_gia'] > 0) {
 
                                     <div class="content_price mb-15">
                                         <span>
-                                        <?= number_format($hang['don_gia'] - $hang['giam_gia'], 0, ',') ?> VNĐ
+                                        <?= number_format($hang['don_gia']) ?> VNĐ
                                         </span>
                                         <span class="old-price">
-                                        <?= number_format($hang['don_gia'], 0, ',') ?> VNĐ
+
                                         </span>
                                     </div>
                                     <div class="box_quantity mb-20">
@@ -231,45 +225,47 @@ if ($hang['don_gia'] > 0) {
                                             <div class="product_info_content">
                                                 
                                             </div>
+
+
                                             <?php
-   $ma_hh = isset($_GET['id']) ? $_GET['id'] : null;
-   // Chuẩn bị câu lệnh SQL SELECT bình luận theo mã hàng hóa
-   $sql_binh_luan = "SELECT * FROM binh_luan WHERE ma_hh = :ma_hh";
-   $stmt_binh_luan = $conn->prepare($sql_binh_luan);
-   $stmt_binh_luan->bindParam(':ma_hh', $hang_id);
-   $stmt_binh_luan->execute();
-   
-   // Kiểm tra xem có bình luận nào không
-   if ($stmt_binh_luan->rowCount() > 0) {
-       // Hiển thị từng bình luận
-       while ($row_binh_luan = $stmt_binh_luan->fetch(PDO::FETCH_ASSOC)) {
-   ?>
+                                            $ma_hh = isset($_GET['id']) ? $_GET['id'] : null;
+                                            // Chuẩn bị câu lệnh SQL SELECT bình luận theo mã hàng hóa
+                                            $sql_binh_luan = "SELECT * FROM binh_luan WHERE ma_hh = :ma_hh";
+                                            $stmt_binh_luan = $conn->prepare($sql_binh_luan);
+                                            $stmt_binh_luan->bindParam(':ma_hh', $hang_id);
+                                            $stmt_binh_luan->execute();
+
+                                            // Kiểm tra xem có bình luận nào không
+                                            if ($stmt_binh_luan->rowCount() > 0) {
+                                                // Hiển thị từng bình luận
+                                                while ($row_binh_luan = $stmt_binh_luan->fetch(PDO::FETCH_ASSOC)) {
+                                                    ?>
 
 
-    <div class="product_info_inner">
-       <div class="product_ratting mb-5">
-            <strong>Mã</strong>
-            <p><?php echo $row_binh_luan['ma_hh']; ?></p>
-        </div>  
-        <div class="product_ratting col-3 mb-5">
-            <strong>Ngày</strong>
-            <p><?php echo $row_binh_luan['ngay_lap']; ?></p>
-        </div>
-        <div class="product_demo">
-            <strong><?php echo $row_binh_luan['ma_kh']; ?></strong>
-            <p><?php echo $row_binh_luan['noi_dung']; ?></p>
-        </div>
-   
-    </div>
-    <hr>
-<?php
-    }
-} else {
-    echo "Chưa có bình luận nào cho sản phẩm này.";
-}
+                                                    <div class="product_info_inner">
+                                                        <div class="product_ratting mb-5">
+                                                            <strong>Mã</strong>
+                                                            <p><?php echo $row_binh_luan['ma_hh']; ?></p>
+                                                        </div>
+                                                        <div class="product_ratting col-3 mb-5">
+                                                            <strong>Ngày</strong>
+                                                            <p><?php echo $row_binh_luan['ngay_lap']; ?></p>
+                                                        </div>
+                                                        <div class="product_demo">
+                                                            <strong><?php echo $row_binh_luan['ma_kh']; ?></strong>
+                                                            <p><?php echo $row_binh_luan['noi_dung']; ?></p>
+                                                        </div>
 
-?>
-                                            
+                                                    </div>
+                                                    <hr>
+                                                    <?php
+                                                }
+                                            } else {
+                                                echo "Chưa có bình luận nào cho sản phẩm này.";
+                                            }
+
+                                            ?>
+
                                             <div class="product_review_form">
                                                 <form action="../hang-hoa/binh-luan.php" method="post">
                                                     <hr>
@@ -329,25 +325,13 @@ if ($hang['don_gia'] > 0) {
                         </div>
               
                 
-                <!--new product area start-->
 
 
-                <!--new product area start-->
-                
-                <!--new product area start-->
 
             </div>
             <!--pos page inner end-->
         </div>
     </div>
-    <!--pos page end-->
-
-
-
-
-
-    <!-- modal area end -->
-
 
 
     <!-- all js here -->
