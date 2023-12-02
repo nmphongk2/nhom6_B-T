@@ -1,4 +1,22 @@
 <!-- Sidebar -->
+<?php
+
+
+if (isset($_SESSION['name_page'])) {
+    $name_page = $_SESSION['name_page'];
+}
+
+if (isset($_SESSION["ma_kh"])) {
+    $ma_kh = $_SESSION["ma_kh"];
+}
+if (isset($_SESSION['total_cart'])) {
+    echo $_SESSION['total_cart'];
+} else {
+}
+
+
+?>
+
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
