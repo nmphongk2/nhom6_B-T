@@ -1,6 +1,20 @@
+
 <?php
-require_once '../../global.php';
-// check_login();
+
+
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']['vai_tro_id'] == 1) {
+        $ten_kh = $_SESSION['user']['ten_kh'];
+    } else {
+        // Nếu không phải là nhân viên, chuyển hướng đến trang chủ
+        header("Location: " . $SITE_URL . "/index.php");
+        exit();
+    }
+} else {
+    // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+    header("Location: " . $SITE_URL . "/tai-khoan/dang-nhap.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
