@@ -70,7 +70,7 @@ function check_login()
     if (isset($_SESSION['user'])) {
         // Kiểm tra xem trang hiện tại có nằm trong thư mục admin hay không
         // Nếu không, cho phép truy cập
-        if (strpos($_SERVER['REQUEST_URI'], '/admin/') === false) {
+        if (strpos($_SERVER['REQUEST_URI'], '/admin3/') === false) {
             return;
         }
     }

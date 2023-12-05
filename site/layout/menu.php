@@ -53,9 +53,8 @@ if (isset($_SESSION['total_cart'])) {
                                                     <li><a href="contact.php" title="Contact">Hỗ Trợ</a></li>
                                                     <li><a href="wishlist.php" title="wishlist">Yêu Thích</a></li>
                                                
-                                                 <li><a href="./trang-chinh/gio-hang.php" title="My cart">Giỏ Hàng</a></li>
-                                                    <li><a href="../tai-khoan/thong-tin.php" title="My account">Tài
-                                                            Khoản</a></li>
+                                                 <li><a href="../cart/viewcart.php" title="My cart">Giỏ Hàng</a></li>
+                                                    <li><a href="../tai-khoan/thong-tin.php" title="My account">Tài Khoản</a></li>
   <!-- User -->
   <div class="dropdown widget-header icontext">
                     <a href="#" class="icon icon-sm rounded-circle border" id="dropdownMenu1" data-toggle="dropdown"
@@ -132,7 +131,7 @@ if (isset($_SESSION['total_cart'])) {
                                        <!--logo start-->
                                         <div class="col-lg-3 col-md-3">
                                             <div class="logo">
-                                                <a href="index.php"><img src="<?= $CONTENT_URL?>/img/logo/logo.png" alt=""></a>
+                                                <a href="../trang-chinh/"><img src="<?= $CONTENT_URL?>/img/logo/logo.png" alt=""></a>
                                             </div>
                                         </div>
                                         <!--logo end-->
@@ -228,7 +227,7 @@ if (isset($_SESSION['total_cart'])) {
                                                             
                                                             </li>
                                                             <li <?= $name_page == 'Hang_cu' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/shop-fullwidth.php">Hàng Cũ</a></li>
-                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/trang-chinh/lien-he.php">Liên Hệ</a></li>
+                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/trang-chinh/contact.php">Liên Hệ</a></li>
                                                              
                                                             </li>
                                                            
