@@ -29,33 +29,52 @@
                         aria-describedby="helpId">
                 </div>
 
+                <div class="form-group">
+                    <label for="">Số Điện thoại</label>
+                    <input type="text" name="sdt" id="" class="form-control" value="<?= $sdt ?>"
+                           aria-describedby="helpId">
+                </div>
+
 
                 <div class="form-group">
                     <label for="">Ảnh đại diện</label>
                     <input type="file" name="up_hinh" id="" class="form-control" aria-describedby="helpId">
                 </div>
-                <div class="form-group pl-2">
 
+                <div class="form-group">
+                    <label for="ngay_sinh">Ngày Sinh</label>
+                    <input type="date" name="ngay_sinh" class="form-control" value="<?= $ngay_sinh ?>"
+                           aria-describedby="helpId">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Địa Chỉ</label>
+                    <input type="text" name="dia_chi" id="" class="form-control" value="<?= $dia_chi ?>"
+                           aria-describedby="helpId">
+                </div>
+
+                <div class="form-group">
+                    <label for="gioi_tinh">Giới Tính</label><br>
+                    <select class="custom-select custom-select-lg mb-8" name="gioi_tinh">
+                        <option value="" <?= ($gioi_tinh == '') ? 'selected' : ''; ?>>Chọn giới tính</option>
+                        <option value="Nam" <?= ($gioi_tinh == 'Nam') ? 'selected' : ''; ?>>Nam</option>
+                        <option value="Nữ" <?= ($gioi_tinh == 'Nữ') ? 'selected' : ''; ?>>Nữ</option>
+                    </select>
+                </div>
+
+                <hr>
+                <div class="form-group pl-2">
                     <i class=" text-danger"><?= (isset($MESSAGE) && (strlen($MESSAGE) > 0)) ? $MESSAGE : "" ?></i>
 
                 </div>
 
-                <!--                <div class="form-group">-->
-                <!--                    <select class="custom-select custom-select-lg mb-8" name="gioi_tinh">-->
-                <!--                        <option selected>Giới Tính</option>-->
-                <!--                        <option value="Nam">Nam</option>-->
-                <!--                        <option value="Nữ">Nữ</option>-->
-                <!--                    </select>-->
-                <!--                </div>-->
-                <hr>
-                <input name="vai_tro" value="<?= $vai_tro ?>" type="hidden">
-                <input name="kich_hoat" value="<?= $kich_hoat ?>" type="hidden">
-                <input name="mat_khau" value="<?= $mat_khau ?>" type="hidden">
-                <input name="hinh" value="<?= $hinh ?>" type="hidden">
+                <input name="hinh_hidden" value="<?= $UPLOAD_URL . '/users/' . $hinh ?>" type="hidden">
+                <input name="ngay_sinh_hidden" value="<?= $ngay_sinh ?>" type="hidden">
+                <input name="gioi_tinh_hidden" value="<?= $gioi_tinh ?>" type="hidden">
+
                 <div class="form-group">
                     <button type="submit" name="btn_update" class="btn btn-success btn-block">Cập nhật</button>
                 </div>
-            </form>
             </form>
 
 
