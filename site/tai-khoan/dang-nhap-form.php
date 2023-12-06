@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!-- ============================ COMPONENT LOGIN   ================================= -->
 <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
@@ -43,7 +40,9 @@
                 <button type="submit" name="btn_login" class="btn btn-success btn-block"> Đăng nhập</button>
             </div>
         </form>
+        <div class="panel panel-default">
 
+        </div>
         <button onclick="redirectToGoogle()" class="btn btn-success  btn-block"> Đăng nhập Google</button>
 
             </div> 
