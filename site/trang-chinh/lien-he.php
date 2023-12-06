@@ -9,9 +9,7 @@
 </head>
 
 <body>
-    <?php
-    include "../layout/menu.php";
-    ?>
+    
     <section class="resume-section p-4 p-lg-5 text-center" id="contact">
         <div class="container">
             <div class="my-auto">
@@ -19,8 +17,7 @@
 
                 <ul class="fa-ul mb-4 ml-0">
                     <li id="mail-address">
-                        <!--               Replace with your email address -->
-                        <i class="fas fa-envelope-open mr-2 contact-icons"></i>thaiphu2004@gmail.com</a>
+                        <i class="fas fa-envelope-open mr-2 contact-icons"></i>thaiphu2004@gmail.com
                     </li>
                     <li>
                         <i class="fas fa-mobile-alt mr-2 contact-icons"></i>0798934010
