@@ -1,6 +1,6 @@
 <?php
 require_once "../../dao/pdo.php";
-require_once "../../dao/khach-hang.php";
+require_once "../../dao/khach_hang.php";
 require "../../global.php";
 check_login();
 
@@ -8,7 +8,7 @@ extract($_REQUEST);
 if (exist_param("btn_list")) {
 
     //show dữ liệu
-    $items = khach_hang_select_all();
+    $items = khach_hang_selectall();
     $VIEW_NAME = "list.php";
 } else if (exist_param("btn_insert")) {
     #lấy dữ liệu từ form

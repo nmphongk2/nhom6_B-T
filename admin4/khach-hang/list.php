@@ -40,10 +40,10 @@
                         <tr>
                             <td><input type="checkbox" name="ma_kh[]" value="<?= $ma_kh ?>"></td>
                             <td><?= $ma_kh ?></td>
-                            <td><?= $ho_ten ?></td>
+                            <td><?= $ten_kh ?></td>
                             <td><?= $email ?></td>
                             <td><?= $img ?></td>
-                            <td><?= ($vai_tro == 1) ? "Nhân viên" : "Khách hàng"; ?></td>
+                            <td><?= ($vai_tro_id == 1) ? "Nhân viên" : "Khách hàng"; ?></td>
                             <td><?= ($kich_hoat == 1) ? "Rồi" : "Chưa"; ?></td>
                             <td class="text-end">
                                 <a href="<?= $suakh ?>" class="btn btn-outline-info btn-rounded"><i
