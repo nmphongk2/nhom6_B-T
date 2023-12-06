@@ -18,8 +18,8 @@ check_login();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bad-Brabit-Dự án Mẫu</title>
-    <link rel="icon" href="<?= $CONTENT_URL ?>/images/logo.webp" type="image/gif" sizes="16x16">
+    <title>NHOM_6</title>
+    <link rel="icon" href="<?= $CONTENT_URL ?>/img/logo/PNP.jpg" type="image/gif" sizes="16x16">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/bootstrap.min.css" type="text/css">
     <!-- Font awesome -->

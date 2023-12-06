@@ -1,7 +1,7 @@
 <nav id="sidebar">
     <div class="sidebar-header">
         <a href="<?= $SITE_URL ?>/trang-chinh/">
-            <img src="<?= $CONTENT_URL ?>/images/logo.webp" alt="logo" class="img-fluid logo">
+            <img src="<?= $CONTENT_URL ?>/img/logo/PNP.jpg" alt="logo" class="img-fluid logo">
         </a>
     </div>
     <ul class="list-unstyled components text-secondary">
@@ -71,7 +71,7 @@
         </li>
 
         <li>
-            <a href="settings.html"><i class="fas fa-cog"></i>Cài đặt</a>
+            <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
         </li>
     </ul>
 </nav>

@@ -1,6 +1,6 @@
 <?php
 require_once "../../dao/pdo.php";
-require_once "../../dao/khach-hang.php";
+require_once "../../dao/khach_hang.php";
 require "../../global.php";
 check_login();
 
@@ -24,7 +24,7 @@ if (exist_param("btn_list")) {
 
     $gioi_tinh = $_POST['$gioi_tinh'];
     $kich_hoat = $_POST['kich_hoat'];
-    $vai_tro = $_POST['vai_tro'];
+    $vai_tro_id = $_POST['vai_tro_id'];
     // Upload file lên host
     $hinh = save_file('hinh', "$UPLOAD_URL/users");
     //insert vào db
@@ -74,7 +74,7 @@ if (exist_param("btn_list")) {
 
     $gioi_tinh = $_POST['$gioi_tinh'];
     $kich_hoat = $_POST['kich_hoat'];
-    $vai_tro = $_POST['vai_tro'];
+    $vai_tro_id = $_POST['vai_tro_id'];
 
 
     $up_hinh = save_file("up_hinh", "$UPLOAD_URL/users/");

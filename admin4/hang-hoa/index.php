@@ -21,7 +21,7 @@ if (exist_param("btn_list")) {
     $giam_gia = $_POST['giam_gia'];
     $ma_loai = $_POST['ma_loai'];
     $dac_biet = $_POST['dac_biet'];
-    $so_luot_xem = $_POST['so_luot_xem'];
+    $so_luot_xem = $_POST['luot_xem'];
     $mo_ta = $_POST['mo_ta'];
     $ngay_nhap = $_POST['ngay_nhap'];
 
@@ -29,7 +29,7 @@ if (exist_param("btn_list")) {
     // Upload file lên host
     $hinh = save_file('hinh', "$UPLOAD_URL/products/");
     //insert vào db
-    hang_hoa_insert($ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
+    hang_hoa_insert($ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $luot_xem, $ngay_nhap, $mo_ta);
 
     //show dữ liệu
     $items = hang_hoa_select_page('ma_hh', 10);
@@ -69,7 +69,7 @@ if (exist_param("btn_list")) {
     $giam_gia = $_POST['giam_gia'];
     $ma_loai = $_POST['ma_loai'];
     $dac_biet = $_POST['dac_biet'];
-    $so_luot_xem = $_POST['so_luot_xem'];
+    $so_luot_xem = $_POST['luot_xem'];
     $mo_ta = $_POST['mo_ta'];
     $ngay_nhap = $_POST['ngay_nhap'];
 
@@ -77,7 +77,7 @@ if (exist_param("btn_list")) {
     $hinh = strlen($up_hinh) > 0 ? $up_hinh : $hinh;
 
 
-    hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
+    hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $luot_xem, $ngay_nhap, $mo_ta);
     //hiển thị danh sách
 
     $items = hang_hoa_select_page('ma_hh', 10);

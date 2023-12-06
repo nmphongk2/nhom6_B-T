@@ -57,7 +57,7 @@
                                         class="text-danger">(<?= isset($percent_discount) ? $percent_discount : '' ?>
                                     %)</i>
                             </td>
-                            <td><?= $so_luot_xem ?></td>
+                            <td><?= $luot_xem ?></td>
                             <td><?= $ngay_nhap ?></td>
                             <td><?= ($dac_biet == 1) ? "Đặc biệt" : "Không"; ?></td>
 

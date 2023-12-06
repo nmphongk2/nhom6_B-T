@@ -6,23 +6,18 @@
     font-style: italic;
     font-size: 14px;
 }
-
 .object-fit-cover {
     object-fit: cover;
 }
-
 .object-fit-contain {
     object-fit: contain;
 }
-
 .logo {
     height: 46px;
 }
-
 .ml-auto {
     margin-left: auto;
 }
-
 /* Navbar */
 .nav-dropdown .nav-link {
     color: #b2ebf2;
@@ -89,7 +84,6 @@
 .nav-dropdown .dropdown-divider {
     margin: 3px 0;
 }
-
 /* ==========================sidebar-=========================== */
 #sidebar {
     min-width: 250px;
@@ -165,7 +159,6 @@ a[aria-expanded='true'] {
         display: none;
     }
 }
-
 /* ==========================body-=========================== */
 
 body,
