@@ -1,22 +1,4 @@
 <!-- Sidebar -->
-<?php
-
-
-if (isset($_SESSION['name_page'])) {
-    $name_page = $_SESSION['name_page'];
-}
-
-if (isset($_SESSION["ma_kh"])) {
-    $ma_kh = $_SESSION["ma_kh"];
-}
-if (isset($_SESSION['total_cart'])) {
-    echo $_SESSION['total_cart'];
-} else {
-}
-
-
-?>
-
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -87,8 +69,8 @@ if (isset($_SESSION['total_cart'])) {
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
 
-                <a class="collapse-item" href="login.html">Thêm khách hàng</a>
-                <a class="collapse-item" href="register.html">Danh sách khách hàng</a>
+                <a class="collapse-item" href="<?= $ADMIN_URL ?>/khach-hang/">Thêm khách hàng</a>
+                <a class="collapse-item" href="<?= $ADMIN_URL ?>/khach-hang/index.php?btn_list">Danh sách khách hàng</a>
 
             </div>
         </div>
@@ -98,14 +80,14 @@ if (isset($_SESSION['total_cart'])) {
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="<?= $ADMIN_URL ?>/thong-ke/">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Thống kê</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?= $ADMIN_URL ?>/binh-luan/">
             <i class="fas fa-fw fa-table"></i>
             <span>Bình luận</span></a>
     </li>
@@ -122,7 +104,7 @@ if (isset($_SESSION['total_cart'])) {
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-table"></i>
             <span>Cài đặt</span></a>
     </li>
