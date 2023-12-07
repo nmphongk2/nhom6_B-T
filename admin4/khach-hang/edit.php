@@ -17,7 +17,7 @@ if (is_file($img_path)) {
                         <div class="form-group col-sm-6">
                             <label for="ma_kh" class="form-label">MÃ KHÁCH HÀNG (tên đăng nhập)</label>
                             <input type="text" name="ma_kh" id="ma_kh" class="form-control" required
-                                   value="<?= $ma_kh ?>">
+                                   value="<?= $ma_tk ?>">
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="ho_ten" class="form-label">Họ và tên</label>

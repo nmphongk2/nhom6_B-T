@@ -279,7 +279,8 @@
                                                         <div class="col-lg-6 col-md-6">
                                                             <label for="author">Khách hàng</label>
                                                             <input id="author" name="ma_kh" type="text"
-                                                                value='<?php echo isset($_SESSION['user']['ma_kh']) ? $_SESSION['user']['ma_kh'] : "Chưa đăng nhập"; ?>' readonly>
+                                                                   value='<?php echo isset($_SESSION['user']['ma_tk']) ? $_SESSION['user']['ma_tk'] : "Chưa đăng nhập"; ?>'
+                                                                   readonly>
 
                                                         </div>
                                                         <div class="col-lg-6 col-md-6">

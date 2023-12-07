@@ -24,7 +24,7 @@
                                 <img src="<?= $UPLOAD_URL . "/users/" . $_SESSION['user']['hinh'] ?>"
                                      alt="Avatar" class="img-fluid my-5" style="width: 250px;"/>
 
-                                <h5><?php echo isset($_SESSION['user']['ten_kh']) ? $_SESSION['user']['ten_kh'] : "Chưa đăng nhập"; ?></h5>
+                                <h5><?php echo isset($_SESSION['user']['ho_ten']) ? $_SESSION['user']['ho_ten'] : "Chưa đăng nhập"; ?></h5>
                                 <p>Năm
                                     Sinh: <?php echo isset($_SESSION['user']['ngay_sinh']) ? $_SESSION['user']['ngay_sinh'] : "Chưa đăng nhập"; ?></p>
 
@@ -52,7 +52,7 @@
                                 <div class="row pt-1">
                                     <div class="col-6 mb-3">
                                         <h6>Họ Tên</h6>
-                                        <p class="text-muted"><?php echo isset($_SESSION['user']['ten_kh']) ? $_SESSION['user']['ten_kh'] : "Chưa đăng nhập"; ?></p>
+                                        <p class="text-muted"><?php echo isset($_SESSION['user']['ho_ten']) ? $_SESSION['user']['ho_ten'] : "Chưa đăng nhập"; ?></p>
                                     </div>
                                     <div class="col-6 mb-3">
                                         <h6>Địa Chỉ</h6>

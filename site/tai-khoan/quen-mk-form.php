@@ -7,7 +7,7 @@
 
             <div class="form-group">
                 <label for="username" class="form-label">Tài khoản(tên đăng nhập)</label>
-                <input name="ma_kh" class="form-control" id="username" placeholder="Username" type="text">
+                <input name="ma_tk" class="form-control" id="username" placeholder="Username" type="text">
             </div> <!-- form-group// -->
 
             <div class="form-group">

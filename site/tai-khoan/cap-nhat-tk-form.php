@@ -6,7 +6,8 @@
         <div class="col-lg-6 col-md p-6">
             <img src="<?= $UPLOAD_URL . '/users/' . $hinh ?>" class="img-fluid" alt="">
         </div>
-    
+
+
 
         
         <div class="col-lg-6 col-md">
@@ -15,12 +16,12 @@
 
                 <div class="form-group ">
                     <label for="">Tên đăng nhập</label>
-                    <input type="text" name="ma_kh" id="" class="form-control" value="<?= $ma_kh ?>" readonly
+                    <input type="text" name="ma_kh" id="" class="form-control" value="<?= $ma_tk ?>" readonly
                         aria-describedby="helpId">
                 </div>
                 <div class="form-group form">
                     <label for="">Họ và tên</label>
-                    <input type="text" name="ten_kh" id="" class="form-control" value="<?= $ten_kh ?>"
+                    <input type="text" name="ho_ten" id="" class="form-control" value="<?= $ho_ten ?>"
                         aria-describedby="helpId">
                 </div>
                 <div class="form-group">
@@ -44,6 +45,7 @@
                 <div class="form-group">
                     <label for="ngay_sinh">Ngày Sinh</label>
                     <input type="date" name="ngay_sinh" class="form-control" value="<?= $ngay_sinh ?>"
+
                            aria-describedby="helpId">
                 </div>
 
@@ -53,23 +55,24 @@
                            aria-describedby="helpId">
                 </div>
 
+
+                <label for="gioi_tinh">Giới Tính</label>
                 <div class="form-group">
-                    <label for="gioi_tinh">Giới Tính</label><br>
-                    <select class="custom-select custom-select-lg mb-8" name="gioi_tinh">
+                    <select class="form-control" name="gioi_tinh">
                         <option value="" <?= ($gioi_tinh == '') ? 'selected' : ''; ?>>Chọn giới tính</option>
                         <option value="Nam" <?= ($gioi_tinh == 'Nam') ? 'selected' : ''; ?>>Nam</option>
                         <option value="Nữ" <?= ($gioi_tinh == 'Nữ') ? 'selected' : ''; ?>>Nữ</option>
                     </select>
                 </div>
 
-                <hr>
                 <div class="form-group pl-2">
                     <i class=" text-danger"><?= (isset($MESSAGE) && (strlen($MESSAGE) > 0)) ? $MESSAGE : "" ?></i>
 
                 </div>
 
                 <input name="hinh_hidden" value="<?= $UPLOAD_URL . '/users/' . $hinh ?>" type="hidden">
-                <input name="ngay_sinh_hidden" value="<?= $ngay_sinh ?>" type="hidden">
+                <input name="ngay_sinh_hidden" value="<?= $ngay_sinh = date('Y-m-d', strtotime($ngay_sinh));
+                ?>" type="hidden">
                 <input name="gioi_tinh_hidden" value="<?= $gioi_tinh ?>" type="hidden">
 
                 <div class="form-group">

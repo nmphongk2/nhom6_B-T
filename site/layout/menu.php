@@ -7,9 +7,9 @@
                 if (isset($_SESSION['name_page'])) {
                     $name_page = $_SESSION['name_page'];
                 }
-              
-if (isset($_SESSION["ma_kh"])) {
-    $ma_kh = $_SESSION["ma_kh"];
+
+if (isset($_SESSION["ma_tk"])) {
+    $ma_tk = $_SESSION["ma_tk"];
 }
 if (isset($_SESSION['total_cart'])) {
     echo $_SESSION['total_cart'];
@@ -30,19 +30,10 @@ if (isset($_SESSION['total_cart'])) {
                                         <div class="col-lg-6 col-md-6">
                                            <div class="switcher">
                                                 <ul>
-                                                    <li class="languages"><a href="#"><img src="<?= $CONTENT_URL?>/img/logo/vn.png" style="width: 35px" alt=""> Tiếng Việt <i class=""></i></a>
-                                                        <ul class="dropdown_languages">
-                                                            <li><a href="#"><img src="<?= $CONTENT_URL?>/img/logo/fontlogo.jpg" alt=""> English</a></li>
-                                                            <li><a href="#"><img src="<?= $CONTENT_URL?>/img/logo/fontlogo2.jpg" alt=""> French </a></li>
-                                                        </ul>   
-                                                    </li> 
 
-                                                    <li class="currency"><a href="#"> Loại Tiền : VNĐ <i class="fa fa-angle-down"></i></a>
-                                                        <ul class="dropdown_currency">
-                                                            <li><a href="#"> Dollar (USD)</a></li>
-                                                            <li><a href="#"> VNĐ (đ)  </a></li>
-                                                        </ul> 
-                                                    </li> 
+
+                                                </ul>
+                                               </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -75,12 +66,10 @@ if (isset($_SESSION['total_cart'])) {
               $user = $_SESSION['user'];
 
               // Kiểm tra loại người dùng (nếu có)
-              if (isset($user['ten_kh'])) {
+              if (isset($user['ho_ten'])) {
                   // Nếu là khách hàng
-                  $ten_nguoi_dung = $user['ten_kh'];
-              } elseif (isset($user['ten_nv'])) {
-                  // Nếu là nhân viên
-                  $ten_nguoi_dung = $user['ten_nv'];
+                  $ten_nguoi_dung = $user['ho_ten'];
+
               } else {
                   // Trường hợp khác (nếu có)
                   $ten_nguoi_dung = "Không xác định";
@@ -254,7 +243,7 @@ if (isset($_SESSION['total_cart'])) {
                         <!--header end -->
                                              
                                                           <!--header end --><script>
-  var isLoggedIn = <?php echo isset($ma_kh) ? 'true' : 'false'; ?>;
+                            var isLoggedIn = <?php echo isset($ma_tk) ? 'true' : 'false'; ?>;
   if (isLoggedIn) {
     document.getElementById('logged-in').style.display = 'block';
     document.getElementById('logged-out').style.display = 'none';

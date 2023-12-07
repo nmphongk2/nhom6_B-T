@@ -45,8 +45,8 @@
         dots: true,
         responsiveClass: true,
     });
-
-
+    
+    
     /* product activation */
     $('.product_active').owlCarousel({
         animateOut: 'fadeOut',
@@ -139,7 +139,7 @@
         items: 1,
         dots: true,
         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-
+    
     });
 
 
@@ -166,9 +166,12 @@
 
     $(".shopping_cart").on("click", function () {
         $('.mini_cart').slideToggle('medium');
-    });
-
-
+    }); 
+    
+    
+    
+    
+    
     // Header Custom dropdowns
     $("header .dropdown-toggle").on("click", function () {
         $(this).toggleClass('open').next('.dropdown-menu').toggleClass('open');
@@ -223,8 +226,10 @@
     });
     $("#amount").val("$" + $("#slider-range").slider("values", 0) +
         " - $" + $("#slider-range").slider("values", 1));
-
-
+    
+    
+	
+	
     /*niceSelect*/
     $('select').niceSelect();
 

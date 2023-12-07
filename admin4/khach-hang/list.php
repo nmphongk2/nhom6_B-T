@@ -27,8 +27,8 @@
 
                     foreach ($items as $item) {
                         extract($item);
-                        $suakh = "index.php?btn_edit&ma_kh=" . $ma_kh;
-                        $xoakh = "index.php?btn_delete&ma_kh=" . $ma_kh;
+                        $suakh = "index.php?btn_edit&ma_tk=" . $ma_tk;
+                        $xoakh = "index.php?btn_delete&ma_tk=" . $ma_tk;
                         $img_path = $UPLOAD_URL . '/users/' . $hinh;
                         if (is_file($img_path)) {
                             $img = "<img src='$img_path' height='50' width='50' class='rounded-circle object-fit-cover'>";
@@ -38,17 +38,17 @@
 
                         ?>
                         <tr>
-                            <td><input type="checkbox" name="ma_kh[]" value="<?= $ma_kh ?>"></td>
-                            <td><?= $ma_kh ?></td>
-                            <td><?= $ten_kh ?></td>
+                            <td><input type="checkbox" name="ma_tk[]" value="<?= $ma_tk ?>"></td>
+                            <td><?= $ma_tk ?></td>
+                            <td><?= $ho_ten ?></td>
                             <td><?= $email ?></td>
                             <td><?= $img ?></td>
                             <td><?= ($vai_tro_id == 1) ? "Nhân viên" : "Khách hàng"; ?></td>
                             <td><?= ($kich_hoat == 1) ? "Rồi" : "Chưa"; ?></td>
                             <td class="text-end">
-                                <a href="<?= $suakh ?>" class="btn btn-outline-info btn-rounded"><i
+                                <a href="<?= $suatk ?>" class="btn btn-outline-info btn-rounded"><i
                                             class="fas fa-pen"></i></a>
-                                <a href="<?= $xoakh ?>" class="btn btn-outline-danger btn-rounded"
+                                <a href="<?= $xoatk ?>" class="btn btn-outline-danger btn-rounded"
                                    onclick="return checkDelete()"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>

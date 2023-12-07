@@ -11,13 +11,13 @@
              <div class="form-row">
                  <div class="col form-group">
                      <label>Họ và tên</label>
-                     <input type="text" class="form-control" placeholder="Họ tên" name="ten_kh">
+                     <input type="text" class="form-control" placeholder="Họ tên" name="ho_ten">
                  </div> <!-- form-group end.// -->
              </div> <!-- form-row end.// -->
              <div class="form-row">
                  <div class="col form-group">
                      <label>Tên đăng nhập</label>
-                     <input type="text" class="form-control" placeholder="Mã Khách Hàng" name="ma_kh">
+                     <input type="text" class="form-control" placeholder="Mã Khách Hàng" name="ma_tk">
                  </div> <!-- form-group end.// -->
              </div> <!-- form-row end.// -->
              <div class="form-group">
@@ -50,7 +50,7 @@
              </div>
              <i class="text-danger"><?= $MESSAGE ?></i>
              <div class="form-group">
-                 <button type="submit" name="btn_register" class="btn btn-success  btn-block"> Đăng ký </button>
+                 <button type="submit" name="btn_register" class="btn btn-success  btn-block"> Đăng ký</button>
              </div> <!-- form-group// -->
              <input type="hidden" name="kich_hoat" value="1">
              <input type="hidden" name="vai_tro-id" value="0">

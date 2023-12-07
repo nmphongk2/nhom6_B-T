@@ -6,8 +6,8 @@
                 <form action="index.php" method="POST" enctype="multipart/form-data" id="admin_add_kh">
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            <label for="ma_kh" class="form-label">Mã khách hàng (tên đăng nhập)</label>
-                            <input type="text" name="ma_kh" id="ma_kh" class="form-control" required>
+                            <label for="ma_tk" class="form-label">Mã khách hàng (tên đăng nhập)</label>
+                            <input type="text" name="ma_tk" id="ma_tk" class="form-control" required>
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="ho_ten" class="form-label">Họ và tên</label>
@@ -51,10 +51,10 @@
                             <label>Kích hoạt?</label>
                             <div class="form-control">
                                 <label class="radio-inline mr-3">
-                                    <input type="radio" value="0" name="vai_tro">Khách hàng
+                                    <input type="radio" value="0" name="vai_tro_id">Khách hàng
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" value="1" name="vai_tro" checked>Nhân viên
+                                    <input type="radio" value="1" name="vai_tro_id" checked>Quản Trị Viên
                                 </label>
                             </div>
                         </div>

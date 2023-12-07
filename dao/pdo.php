@@ -4,7 +4,7 @@ function pdo_get_connection()
 {
     $dburl = "mysql:host=localhost;dbname=test-duan1;charset=utf8";
     $username = 'root';
-    $password = '';
+    $password = 'mysql';
 
     $conn = new PDO($dburl, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -20,11 +20,13 @@ function pdo_execute($sql)
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
     } catch (PDOException $e) {
+        echo "Lỗi SQL: " . $e->getMessage();  // In log lỗi
         throw $e;
     } finally {
         unset($conn);
     }
 }
+
 // ===================Truy vấn nhiều dữ liệu=======================//
 function pdo_query($sql)
 {

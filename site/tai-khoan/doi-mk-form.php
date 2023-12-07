@@ -6,8 +6,8 @@
 
             <div class="form-group">
                 <label for="email" class="form-label">Tài khoản(tên đăng nhập)</label>
-                <input name="ma_kh" class="form-control" placeholder="Tài khoản" readonly type="text"
-                    value="<?= $_SESSION['user']['ma_kh'] ?>">
+                <input name="ma_tk" class="form-control" placeholder="Tài khoản" readonly type="text"
+                       value="<?= $_SESSION['user']['ma_tk'] ?>">
             </div> <!-- form-group// -->
 
             <div class="form-group">

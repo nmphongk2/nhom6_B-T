@@ -20,7 +20,7 @@
         </div>
         <div class="card-single col d-flex justify-content-around bg-danger text-white py-5 ml-3">
             <div>
-                <h1 class="font-weight-bold"><?= $khach_hang ?></h1>
+                <h1 class="font-weight-bold"><?= $nguoi_dung ?></h1>
                 <span>Khách hàng</span>
             </div>
             <div>
