@@ -53,7 +53,7 @@ if (isset($_SESSION['total_cart'])) {
                                                     <li><a href="contact.php" title="Contact">Hỗ Trợ</a></li>
                                                     <li><a href="wishlist.php" title="wishlist">Yêu Thích</a></li>
                                                
-                                                 <li><a href="../cart/viewcart.php" title="My cart">Giỏ Hàng</a></li>
+                                                 <li><a href="../cart/cart.php" title="My cart">Giỏ Hàng</a></li>
                                                     <li><a href="../tai-khoan/thong-tin.php" title="My account">Tài Khoản</a></li>
   <!-- User -->
   <div class="dropdown widget-header icontext">
@@ -130,8 +130,8 @@ if (isset($_SESSION['total_cart'])) {
                                     <div class="row align-items-center">
                                        <!--logo start-->
                                         <div class="col-lg-3 col-md-3">
-                                            <div class="logo">
-                                                <a href="../trang-chinh/"><img src="<?= $CONTENT_URL?>/img/logo/logo.png" alt=""></a>
+                                            <div class="logo" style="width: 200px; height: 120px;">
+                                                <a href="../trang-chinh/"><img src="<?= $CONTENT_URL?>/img/logo/logo1.png" alt=""></a>
                                             </div>
                                         </div>
                                         <!--logo end-->
@@ -150,7 +150,7 @@ if (isset($_SESSION['total_cart'])) {
                                                     <div class="mini_cart">
                                                         <div class="cart_item">
                                                            <div class="cart_img">
-                                                               <a href="#"><img src="<?= $CONTENT_URL ?>/img/cart/cart.jpg" alt=""></a>
+                                                               <a href="../cart/cart.php"><img src="<?= $CONTENT_URL ?>/img/cart/cart.jpg" alt=""></a>
                                                            </div>
                                                             <div class="cart_info">
                                                                 <a href="#">lorem ipsum dolor</a>
