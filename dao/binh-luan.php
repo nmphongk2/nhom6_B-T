@@ -1,16 +1,16 @@
 <?php
 require_once 'pdo.php';
-function binh_luan_insert($ma_kh, $ma_hh, $noi_dung, $ngay_lap)
+function binh_luan_insert($ma_tk, $ma_hh, $noi_dung, $ngay_lap)
 {
-    $sql = "INSERT INTO binh_luan(ma_kh, ma_hh, noi_dung, ngay_lap) VALUES (?,?,?,?)";
+    $sql = "INSERT INTO binh_luan(ma_tk, ma_hh, noi_dung, ngay_lap) VALUES (?,?,?,?)";
 
-    pdo_execute($sql, $ma_kh, $ma_hh, $noi_dung, $ngay_lap);
+    pdo_execute($sql, $ma_tk, $ma_hh, $noi_dung, $ngay_lap);
 }
 
-function binh_luan_update($ma_bl, $ma_kh, $ma_hh, $noi_dung, $ngay_lap)
+function binh_luan_update($ma_bl, $ma_tk, $ma_hh, $noi_dung, $ngay_lap)
 {
-    $sql = "UPDATE binh_luan SET ma_kh=?,ma_hh=?,noi_dung=?,ngay_lap=? WHERE ma_bl=?";
-    pdo_execute($sql, $ma_kh, $ma_hh, $noi_dung, $ngay_lap, $ma_bl);
+    $sql = "UPDATE binh_luan SET ma_tk=?,ma_hh=?,noi_dung=?,ngay_lap=? WHERE ma_bl=?";
+    pdo_execute($sql, $ma_tk, $ma_hh, $noi_dung, $ngay_lap, $ma_bl);
 }
 
 function binh_luan_delete($ma_bl)
@@ -63,6 +63,6 @@ function binh_luan_select_by_hang_hoa($ma_hh, $limit = 10)
     $_SESSION['total_page'] = ceil($_SESSION['total_bl'] / $limit);
     $sql = "SELECT b.*, h.ten_hh, k.ten_kh, k.hinh FROM binh_luan b 
     JOIN hang_hoa h ON h.ma_hh = b.ma_hh 
-    JOIN khach_hang k ON k.ma_kh =b.ma_kh WHERE b.ma_hh=? ORDER BY ma_bl DESC LIMIT $begin,$limit";
+    JOIN khach_hang k ON k.ma_tk =b.ma_tk WHERE b.ma_hh=? ORDER BY ma_bl DESC LIMIT $begin,$limit";
     return pdo_query($sql, $ma_hh);
 }

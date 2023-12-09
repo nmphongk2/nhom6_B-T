@@ -98,7 +98,7 @@ if (isset($_SESSION['total_cart'])) {
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="./thong-ke/">
+        <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Thống kê</span></a>
     </li>

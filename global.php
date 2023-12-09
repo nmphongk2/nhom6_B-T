@@ -5,7 +5,7 @@ session_start();
  */
 $ROOT_URL = "/nhom6_B-T";
 $CONTENT_URL = "$ROOT_URL/content";
-$ADMIN_URL = "$ROOT_URL/admin3";
+$ADMIN_URL = "$ROOT_URL/admin4";
 $SITE_URL = "$ROOT_URL/site";
 $SL_PER_PAGE = 10;
 

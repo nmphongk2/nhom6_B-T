@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!-- ============================ COMPONENT LOGIN   ================================= -->
 <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
@@ -9,17 +6,10 @@
 
         <form action="<?= $SITE_URL ?>/tai-khoan/dang-nhap.php" method="POST" id="form_login">
 
-            <div class="form-group">
-                <label for="loai_nguoi_dung" class="form-label">Loại người dùng</label>
-                <select name="loai_nguoi_dung" class="form-control">
-                    <option value="khach_hang">Khách hàng</option>
-                    <option value="nhan_vien">Nhân viên</option>
-                </select>
-            </div>
 
             <div class="form-group">
-                <label for="email" class="form-label">Tài khoản</label>
-                <input name="ma_kh" class="form-control" placeholder="Username" type="text" value="<?= $ma_kh ?>">
+                <label for="ma_tk" class="form-label">Tài khoản</label>
+                <input name="ma_tk" class="form-control" placeholder="Username" type="text" value="<?= $ma_tk ?>">
             </div>
 
             <div class="form-group">
@@ -43,7 +33,9 @@
                 <button type="submit" name="btn_login" class="btn btn-success btn-block"> Đăng nhập</button>
             </div>
         </form>
+        <div class="panel panel-default">
 
+        </div>
         <button onclick="redirectToGoogle()" class="btn btn-success  btn-block"> Đăng nhập Google</button>
 
             </div> 

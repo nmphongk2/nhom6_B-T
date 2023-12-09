@@ -252,7 +252,7 @@
                                                             <p><?php echo $row_binh_luan['ngay_lap']; ?></p>
                                                         </div>
                                                         <div class="product_demo">
-                                                            <strong><?php echo $row_binh_luan['ma_kh']; ?></strong>
+                                                            <strong><?php echo $row_binh_luan['ma_tk']; ?></strong>
                                                             <p><?php echo $row_binh_luan['noi_dung']; ?></p>
                                                         </div>
 
@@ -278,8 +278,9 @@
                                                         </div>
                                                         <div class="col-lg-6 col-md-6">
                                                             <label for="author">Khách hàng</label>
-                                                            <input id="author" name="ma_kh" type="text"
-                                                                value='<?php echo isset($_SESSION['user']['ma_kh']) ? $_SESSION['user']['ma_kh'] : "Chưa đăng nhập"; ?>' readonly>
+                                                            <input id="author" name="ma_tk" type="text"
+                                                                   value='<?php echo isset($_SESSION['user']['ma_tk']) ? $_SESSION['user']['ma_tk'] : "Chưa đăng nhập"; ?>'
+                                                                   readonly>
 
                                                         </div>
                                                         <div class="col-lg-6 col-md-6">
