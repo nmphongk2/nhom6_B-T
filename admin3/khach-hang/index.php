@@ -13,23 +13,19 @@ if (exist_param("btn_list")) {
 } else if (exist_param("btn_insert")) {
     #lấy dữ liệu từ form
     $ma_kh = $_POST['ma_kh'];
-
+    $mat_khau = md5($_POST['mat_khau']);
     $ten_kh = $_POST['ten_kh'];
 
     $email = $_POST['email'];
-    $sdt = $_POST['sdt'];
-    $dia_chi = $_POST['dia_chi'];
-    $ngay_sinh = $_POST['ngay_sinh'];
-    $mat_khau = md5($_POST['mat_khau']);
     $hinh = save_file('hinh', "$UPLOAD_URL/users/");
-    $gioi_tinh = $_POST['$gioi_tinh'];
+
     $kich_hoat = $_POST['kich_hoat'];
     $vai_tro = $_POST['vai_tro'];
 
     // Upload file lên host
 
     //insert vào db
-    khach_hang_insert($ma_kh, $ten_kh, $email, $sdt, $dia_chi, $ngay_sinh, $mat_khau, $hinh, $gioi_tinh, $kich_hoat, $vai_tro_id);
+    khach_hang_insert($ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat, $vai_tro);
 
     //show dữ liệu
     $items = khach_hang_selectall();
@@ -69,23 +65,17 @@ if (exist_param("btn_list")) {
 } else if (exist_param("btn_update")) {
 
     $ma_kh = $_POST['ma_kh'];
-
     $ten_kh = $_POST['ten_kh'];
-
-    $email = $_POST['email'];
-    $sdt = $_POST['sdt'];
-    $dia_chi = $_POST['dia_chi'];
-    $ngay_sinh = $_POST['ngay_sinh'];
     $mat_khau = md5($_POST['mat_khau']);
-
-    $gioi_tinh = $_POST['$gioi_tinh'];
+    $email = $_POST['email'];
     $kich_hoat = $_POST['kich_hoat'];
     $vai_tro = $_POST['vai_tro'];
+
 
     $up_hinh = save_file("up_hinh", "$UPLOAD_URL/users/");
     $hinh = strlen($up_hinh) > 0 ? $up_hinh : $hinh;
 
-    khach_hang_update($ma_kh, $ten_kh, $email, $sdt, $dia_chi, $ngay_sinh, $mat_khau, $hinh, $gioi_tinh, $kich_hoat, $vai_tro_id);
+    khach_hang_update($ma_kh, $mat_khau, $ten_kh, $email, $hinh, $kich_hoat, $vai_tro);
     // khach_hang_update();
     //hiển thị danh sách
 

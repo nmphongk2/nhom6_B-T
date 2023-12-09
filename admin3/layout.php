@@ -1,6 +1,20 @@
+
 <?php
-// require_once '../../global.php';
-// check_login();
+
+
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']['vai_tro_id'] == 1) {
+        $ten_kh = $_SESSION['user']['ten_kh'];
+    } else {
+        // Nếu không phải là nhân viên, chuyển hướng đến trang chủ
+        header("Location: " . $SITE_URL . "/index.php");
+        exit();
+    }
+} else {
+    // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+    header("Location: " . $SITE_URL . "/tai-khoan/dang-nhap.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +45,6 @@
 
         <!-- Main Content -->
         <div id="content">
-
 
             <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -225,28 +238,20 @@
                             </a>
                             <!-- <div class="dropdown-divider"></div> -->
                             <!-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Logout
-                        </a> -->
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a> -->
                             <ul class="nav-list">
                                 <li><a href="<?= $SITE_URL . '/tai-khoan/dang-nhap.php?btn_logout' ?>"
                                        class="dropdown-item"><i class="fas fa-sign-out-alt"></i>
                                         Đăng xuất</a></li>
                             </ul>
                         </div>
-
                     </li>
 
 
                 </ul>
 
-                <!-- end of navbar navigation -->
-                <div class="content">
-                    <!-- -===========================home ===================-->
-
-                    <?php include $VIEW_NAME; ?>
-
-                </div>
 
             </nav>
 
@@ -411,15 +416,15 @@
                                     <canvas id="myPieChart"></canvas>
                                 </div>
                                 <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
+                                <span class="mr-2">
+                                    <i class="fas fa-circle text-primary"></i> Direct
+                                </span>
                                     <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
+                                    <i class="fas fa-circle text-success"></i> Social
+                                </span>
                                     <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
+                                    <i class="fas fa-circle text-info"></i> Referral
+                                </span>
                                 </div>
                             </div>
                         </div>
