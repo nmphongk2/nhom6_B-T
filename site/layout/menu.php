@@ -120,7 +120,8 @@ if (isset($_SESSION['total_cart'])) {
                                        <!--logo start-->
                                         <div class="col-lg-3 col-md-3">
                                             <div class="logo" style="width: 200px; height: 120px;">
-                                                <a href="../trang-chinh/"><img src="<?= $CONTENT_URL?>/img/logo/logo1.png" alt=""></a>
+                                                <a href="../trang-chinh/"><img
+                                                            src="<?= $CONTENT_URL ?>/img/logo/logo.jpg" alt=""></a>
                                             </div>
                                         </div>
                                         <!--logo end-->
