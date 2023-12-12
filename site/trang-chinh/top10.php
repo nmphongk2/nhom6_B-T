@@ -11,13 +11,19 @@
                         <div class="row">
                             <div class="single_p_active owl-carousel">
                                 <?php
-                               
-
                                 $top10 = hang_hoa_select_top10();
+
                                 if (!empty($top10)) {
-                                    foreach ($top10 as $hang) {
-                                        ?>
-                                        <div class="col-lg-3">
+                                foreach ($top10
+
+                                as $hang) {
+                                extract($hang); // Chỉ extract thông tin của mỗi sản phẩm trong vòng lặp này
+
+                                // Tính toán phần trăm giảm giá
+                                $percent_discount = ($don_gia > 0) ? number_format($giam_gia / $don_gia * 100) : 0;
+                                ?>
+
+                                <div class="col-lg-3">
                                             <div class="single_product">
                                                 <div class="product_thumb">
                                                 <a href="../hang-hoa/chi-tiet.php?id=<?= $hang['ma_hh'] ?>">
@@ -27,21 +33,24 @@
                 <img src="<?= $CONTENT_URL ?>/img/cart/span-new.png" width="60px" height="60px" alt="">
                 <!-- <img src="assets\img\cart\span-hot.png" alt=""> -->
             </div>
-
+                                                    <form action="<?= $SITE_URL . "/cart/add-cart.php" ?>" method="GET">
                                                     <div class="product_action">
-                                                        <form action="giohang-xuly.php" method="post">
+
                                                             <input type="hidden" name="ma_hh" value="<?= $hang['ma_hh'] ?>">
-                                                            <a href="#" class="add-to-cart-link"
+                                                        <a href="<?= $SITE_URL . "/cart/add-cart.php?ma_hh=" . $hang['ma_hh'] ?>"
+                                                           class="add-to-cart-link"
                                                                 data-id="<?= $hang['ma_hh'] ?>">
                                                                 <i class="fa fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
                                                             </a>
-                                                        </form>
+
                                                     </div>
+                                                    </form>
                                                 </div>
 
                                                 <div class="product_content">
                                                     <span class="product_price">
-                                                    <?= number_format($hang['don_gia']) ?> VNĐ
+                                                   <?= number_format($don_gia - $giam_gia) ?> VNĐ
+ VNĐ
                                                     </span>
                                                     <h3 class="product_title"><a href="single-product.html">
                                                             <?= $hang['ten_hh'] ?>
@@ -73,4 +82,3 @@
 
                         </div>
                     </div>
-            

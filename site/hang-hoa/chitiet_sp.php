@@ -2,7 +2,7 @@
 
 
     <!-- Add your site or application content here -->
- 
+
     <!--pos page start-->
     <div class="pos_page">
         <div class="container">
@@ -122,7 +122,25 @@
                                             <label>Số Lượng</label>
                                             <input min="0" max="100" value="1" type="number">
                                         </form>
-                                        <button type="submit"><i class="fa fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</button>
+                                        <!-- Bao gồm thư viện jQuery -->
+                                        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+                                        <form action="<?= $SITE_URL . "/cart/add-cart.php" ?>" method="GET">
+                                            <button type="button" class="btn btn-primary" id="addToCartButton">
+                                                <i class="fa fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
+                                            </button>
+                                        </form>
+
+                                        <script>
+                                            // Sử dụng jQuery để bắt sự kiện click vào nút
+                                            $(document).ready(function () {
+                                                $("#addToCartButton").click(function () {
+                                                    // Chuyển hướng trang đến đường dẫn đã được xác định
+                                                    window.location.href = "<?= $SITE_URL . "/cart/add-cart.php?ma_hh=" . $hang['ma_hh'] ?>";
+                                                });
+                                            });
+                                        </script>
+
                                         <a href="#" title="add to wishlist"><i class="fa fa-heart"
                                                 aria-hidden="true"></i></a>
                                     </div>
