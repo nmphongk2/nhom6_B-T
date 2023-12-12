@@ -77,11 +77,11 @@ if (is_file($img_path)) {
                             <label>Kích hoạt?</label>
                             <div class="form-control">
                                 <label class="radio-inline mr-3">
-                                    <input type="radio" value="0" name="vai_tro" <?= !$vai_tro ? 'checked' : '' ?>>Khách
+                                    <input type="radio" value="0" name="vai_tro" <?= !$vai_tro_id ? 'checked' : '' ?>>Khách
                                     hàng
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" value="1" name="vai_tro" <?= $vai_tro ? 'checked' : '' ?>>Nhân
+                                    <input type="radio" value="1" name="vai_tro" <?= $vai_tro_id ? 'checked' : '' ?>>Nhân
                                     viên
                                 </label>
                             </div>

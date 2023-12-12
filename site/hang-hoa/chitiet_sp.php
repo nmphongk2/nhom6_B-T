@@ -122,7 +122,7 @@
                                             <label>Số Lượng</label>
                                             <input min="0" max="100" value="1" type="number">
                                         </form>
-                                        <button type="submit"><i class="fa fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</button>
+                                        <button type="submit"><i class="fa fa-shopping-cart" ></i> Thêm Vào Giỏ Hàng</button>
                                         <a href="#" title="add to wishlist"><i class="fa fa-heart"
                                                 aria-hidden="true"></i></a>
                                     </div>

@@ -11,7 +11,7 @@ if (is_file($img_path)) {
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
-            <div class="card-header text-center bg-dark text-white text-uppercase">Cập nhật hàng hóa</div>
+            <div class="card-header text-center bg-dark text-white text-uppercase">Cập nhật sản phẩm</div>
             <div class="card-body">
                 <form action="index.php?btn_update" method="POST" enctype="multipart/form-data" id="update_hang_hoa">
                     <div class="row">
@@ -96,7 +96,7 @@ if (is_file($img_path)) {
                         <div class="form-group col-sm-4">
                             <label for="so_luot_xem" class="form-label">Số lượt xem</label>
                             <input type="text" name="so_luot_xem" id="so_luot_xem" readonly class="form-control"
-                                   required value="<?= $so_luot_xem ?>">
+                                   required value="<?= $luot_xem ?>">
                         </div>
                     </div>
                     <div class="row">

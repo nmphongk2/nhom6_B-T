@@ -46,9 +46,9 @@
                             <td><?= ($vai_tro_id == 1) ? "Nhân viên" : "Khách hàng"; ?></td>
                             <td><?= ($kich_hoat == 1) ? "Rồi" : "Chưa"; ?></td>
                             <td class="text-end">
-                                <a href="<?= $suatk ?>" class="btn btn-outline-info btn-rounded"><i
+                                <a href="<?= $suakh ?>" class="btn btn-outline-info btn-rounded"><i
                                             class="fas fa-pen"></i></a>
-                                <a href="<?= $xoatk ?>" class="btn btn-outline-danger btn-rounded"
+                                <a href="<?= $xoakh ?>" class="btn btn-outline-danger btn-rounded"
                                    onclick="return checkDelete()"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
