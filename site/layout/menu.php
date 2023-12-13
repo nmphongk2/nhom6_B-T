@@ -43,8 +43,9 @@ if (isset($_SESSION['total_cart'])) {
                                                 <ul>
                                                     <li><a href="contact.php" title="Contact">Hỗ Trợ</a></li>
                                                     <li><a href="wishlist.php" title="wishlist">Yêu Thích</a></li>
-                                               
-                                                 <li><a href="../cart/cart.php" title="My cart">Giỏ Hàng</a></li>
+
+                                                    <li><a href=" ../cart/list-cart.php" title="My cart">Giỏ Hàng</a>
+                                                    </li>
                                                     <li><a href="../tai-khoan/thong-tin.php" title="My account">Tài Khoản</a></li>
   <!-- User -->
   <div class="dropdown widget-header icontext">
