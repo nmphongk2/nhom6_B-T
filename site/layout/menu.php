@@ -1,7 +1,9 @@
 
 <!-- Add your site or application content here -->
 <?php
- // Đảm bảo rằng session_start() được gọi trước bất kỳ dữ liệu đầu ra nào
+
+
+// Đảm bảo rằng session_start() được gọi trước bất kỳ dữ liệu đầu ra nào
 
  
                 if (isset($_SESSION['name_page'])) {
@@ -12,7 +14,7 @@ if (isset($_SESSION["ma_tk"])) {
     $ma_tk = $_SESSION["ma_tk"];
 }
 if (isset($_SESSION['total_cart'])) {
-    echo $_SESSION['total_cart'];
+
 } else {
     
 }
@@ -136,7 +138,9 @@ if (isset($_SESSION['total_cart'])) {
                                                     </form>
                                                 </div>
                                                 <div class="shopping_cart">
-                                                    <a href="#"><i class="fa fa-shopping-cart"></i> 2Items - $209.44 <i class="fa fa-angle-down"></i></a>
+                                                    <a href="#"><i class="fa fa-shopping-cart"></i> Số
+                                                        Lượng: <? echo $_SESSION['total_cart']; ?> <i
+                                                                class="fa fa-angle-down"></i></a>
 
                                                     <!--mini cart-->
                                                     <div class="mini_cart">
@@ -145,7 +149,9 @@ if (isset($_SESSION['total_cart'])) {
                                                                <a href="../cart/cart.php"><img src="<?= $CONTENT_URL ?>/img/cart/cart.jpg" alt=""></a>
                                                            </div>
                                                             <div class="cart_info">
-                                                                <a href="#">lorem ipsum dolor</a>
+                                                                <a href="#">
+                                                                    <td></td>
+                                                                </a>
                                                                 <span class="cart_price">$115.00</span>
                                                                 <span class="quantity">Qty: 1</span>
                                                             </div>
@@ -245,8 +251,8 @@ if (isset($_SESSION['total_cart'])) {
                             </div>
                             
                         <!--header end -->
-                                             
-                                                          <!--header end --><script>
+
+                        <!--header end --><script>
                             var isLoggedIn = <?php echo isset($ma_tk) ? 'true' : 'false'; ?>;
   if (isLoggedIn) {
     document.getElementById('logged-in').style.display = 'block';
