@@ -36,6 +36,33 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
+                            <label for="sdt" class="form-label">Số điện thoại</label>
+                            <input type="tel" name="sdt" id="sdt" class="form-control" pattern="[0-9]{10,11}" required>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="dia_chi" class="form-label">Địa chỉ</label>
+                            <input type="address" name="dia_chi" id="dia_chi" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label>Giới tính</label>
+                            <div class="form-control">
+                                <label class="radio-inline  mr-3">
+                                    <input type="radio" value="0" name="gioi_tinh"> Nam
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" value="1" name="gioi_tinh" checked> Nữ
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="ngay_sinh">Ngày sinh:</label><br>
+                            <input type="date" id="ngay_sinh" name="ngay_sinh" required><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
                             <label>Kích hoạt?</label>
                             <div class="form-control">
                                 <label class="radio-inline  mr-3">
