@@ -12,91 +12,80 @@ $subtotals = 0;
     <?php
     if (isset($_SESSION['cart'])) {
         $subtotals = [];
-        ?>
+    ?>
         <div class="row m-1 pb-5">
             <table class="table table-responsive-md">
                 <thead class="thead text-center">
-                <tr>
-                    <th>Mã SP</th>
-                    <th>Tên SP</th>
-                    <th>Đơn giá</th>
-                    <th>Giảm giá</th>
-                    <th style="width:6rem">Số lượng</th>
-                    <th>Thành tiền</th>
-                    <th>Thao tác</th>
-                </tr>
+                    <tr>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Đơn giá</th>
+                        <th>Giảm giá</th>
+                        <th style="width:6rem">Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Thao tác</th>
+                    </tr>
                 </thead>
 
                 <tbody class="text-center" id="giohang">
 
-                <?php foreach ($_SESSION['cart'] as $index => $item) :
-                    //   print_r ($item);
-                    $tongtien = 0;
-                    $totalAll = 0;
+                    <?php foreach ($_SESSION['cart'] as $index => $item) :
+                        //   print_r ($item);
+                        $tongtien = 0;
+                        $totalAll = 0;
                     ?>
 
-                    <tr>
-                        <td><?= $index ?></td>
-                        <td><?= $item['ten_hh'] ?></td>
-                        <td><span><?= number_format($item['don_gia'], 0, ".", ",") ?></span> VNĐ <input type="hidden"
-                                                                                                        class="don_gia_an"
-                                                                                                        name="gia"
-                                                                                                        value="<?= $item['don_gia'] ?>">
-                        </td>
+                        <tr>
+                            <td><?= $index ?></td>
+                            <td><?= $item['ten_hh'] ?></td>
+                            <td><span><?= number_format($item['don_gia'], 0, ".", ",") ?></span> VNĐ <input type="hidden" class="don_gia_an" name="don_gia" value="<?= $item['don_gia'] ?>">
+                            </td>
 
-                        <td><span><?= number_format($item['giam_gia'], 0, ".", ",") ?></span> đ <input type="hidden"
-                                                                                                       class="giam_gia_an"
-                                                                                                       name="giam_gia"
-                                                                                                       value="<?= $item['giam_gia'] ?>">
-                        </td>
+                            <td><span><?= number_format($item['giam_gia'], 0, ".", ",") ?></span> đ <input type="hidden" class="giam_gia_an" name="giam_gia" value="<?= $item['giam_gia'] ?>">
+                            </td>
 
-                        <td class="pt-1 m-auto">
-                            <form action="delete_cart.php?act=update_sl" method="post">
-                                <input type="number" class="form-control sl" name="update_sl"
-                                       value="<?= $item['so_luong'] ?>" min="1" max="10">
-                                <input type="hidden" class="form-control" name="ma_hh" value="<?= $index ?>">
-                            </form>
-                        </td>
-                        <?php
-                        $subtotal = ($item['don_gia'] * $item['so_luong']) - ($item['giam_gia'] * $item['so_luong']);
-                        $subtotals[] = $subtotal;
-                        ?>
-                        <td><span class="thanh_tien_sp"></span> <?= number_format($subtotal, 0, ".", ".") ?> VND</td>
-                        <td class="pt-1 m-auto">
-                            <a onclick="return confirm('Bạn chắc chắn muốn xóa k??');"
-                               href="<?= $SITE_URL . "/cart/delete-cart.php?act=delete&id=" . $index ?>"
-                               class="btn btn-outline-danger"> xoá </a>
-                        </td>
-                    </tr>
-                <?php
-                endforeach ?>
+                            <td class="pt-1 m-auto">
+                                <form action="delete_cart.php?act=update_sl" method="post">
+                                    <input type="number" class="form-control sl" name="update_sl" value="<?= $item['so_luong'] ?>" min="1" max="10">
+                                    <input type="hidden" class="form-control" name="ma_hh" value="<?= $index ?>">
+                                </form>
+                            </td>
+                            <?php
+                            $subtotal = ($item['don_gia'] * $item['so_luong']) - ($item['giam_gia'] * $item['so_luong']);
+                            $subtotals[] = $subtotal;
+                            ?>
+                            <td><span class="thanh_tien_sp"></span> <?= number_format($subtotal, 0, ".", ".") ?> VND</td>
+                            <td class="pt-1 m-auto">
+                                <a onclick="return confirm('Bạn chắc chắn muốn xóa k??');" href="<?= $SITE_URL . "/cart/delete-cart.php?act=delete&id=" . $index ?>" class="btn btn-outline-danger"> xoá </a>
+                            </td>
+                        </tr>
+                    <?php
+                    endforeach ?>
 
-                <?php
-                $tongtien = array_sum($subtotals);
-                ?>
+                    <?php
+                    $tongtien = array_sum($subtotals);
+                    ?>
 
                 </tbody>
 
                 <tfoot id="tongdonhang">
 
-                <tr class="text-center">
+                    <tr class="text-center">
 
-                    <th colspan="5">Tổng thành tiền:</th>
+                        <th colspan="5">Tổng thành tiền:</th>
 
-                    <td class="  text-danger font-weight-bold"><span
-                                id="tong_thanh_tien"><?= number_format($tongtien, 0, ".", ".") ?></span> VND
-                    </td>
-                    <td></td>
-                </tr>
-                <tr class="text-right">
-                    <th colspan="7">
-                        <a href="<?= $SITE_URL . "/cart/list-cart.php?form_invoice" ?>" class="btn btn-success">Thanh
-                            toán</a>
-                        <a onclick="return confirm('Bạn chắc chắn muốn xóa tất cả k??');"
-                           href="<?= $SITE_URL . "/cart/delete-cart.php?act=deleteAll" ?>" class="btn btn-danger">Xóa
-                            tất cả</a>
-                    </th>
-                </tr>
+                        <td class="  text-danger font-weight-bold"><span id="tong_thanh_tien"><?= number_format($tongtien, 0, ".", ".") ?></span> VND
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="text-right">
+                        <th colspan="7">
+                            <a href="<?= $SITE_URL . "/cart/list-cart.php?form_invoice" ?>" class="btn btn-success">Thanh
+                                toán</a>
+                            <a onclick="return confirm('Bạn chắc chắn muốn xóa tất cả k??');" href="<?= $SITE_URL . "/cart/delete-cart.php?act=deleteAll" ?>" class="btn btn-danger">Xóa
+                                tất cả</a>
+                        </th>
+                    </tr>
                 </tfoot>
             </table>
         </div>
