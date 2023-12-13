@@ -58,9 +58,9 @@
                              </h3>
                              <div class="product-price">
                                  <div class="col d-flex justify-content-center align-items-center">
-                                     <del class="d-block text-muted fz-14"><?= number_format($don_gia, 0, ',') ?>đ</del>
+                                     <del class="d-block text-muted fz-14"><?= number_format($don_gia) ?>đ</del>
                                      <p class="text-danger font-weight-bold fz-20 d-block ml-3 mb-0">
-                                         <?= number_format($don_gia - $giam_gia, 0, ',') ?>đ</p>
+                                         <?= number_format($don_gia - $giam_gia) ?>VND</p>
                                  </div>
                              </div>
                              <div class="col m-2">
