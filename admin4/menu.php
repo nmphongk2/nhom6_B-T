@@ -1,7 +1,7 @@
 <nav id="sidebar">
     <div class="sidebar-header">
         <a href="<?= $SITE_URL ?>/trang-chinh/">
-            <img src="<?= $CONTENT_URL ?>/images/logo.png" alt="logo" class="img-fluid logo">
+            <img src="<?= $CONTENT_URL ?>/images/logo.jpg" alt="logo" class="img-fluid logo">
         </a>
     </div>
     <ul class="list-unstyled components text-secondary">
