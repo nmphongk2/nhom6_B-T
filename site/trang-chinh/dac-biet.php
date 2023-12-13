@@ -28,7 +28,7 @@
 
                                 <img src="<?= $UPLOAD_URL . '/products/' . $hang['hinh'] ?>" alt="Ảnh sản phẩm"></a>
                             <div class="img_icone">
-                                <img src="<?= $CONTENT_URL ?>/img/cart/span-new.png" width="60px" height="60px" alt="">
+                                <img src="<?= $CONTENT_URL ?>/img/cart/span-hot.png" width="60px" height="60px" alt="">
                                 <!-- <img src="assets\img\cart\span-hot.png" alt=""> -->
                             </div>
                             <form action="<?= $SITE_URL . "/cart/add-cart.php" ?>" method="GET">

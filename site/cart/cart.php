@@ -40,7 +40,7 @@ $subtotals = 0;
                         <td><?= $item['ten_hh'] ?></td>
                         <td><span><?= number_format($item['don_gia'], 0, ".", ",") ?></span> VNĐ <input type="hidden"
                                                                                                         class="don_gia_an"
-                                                                                                        name="gia"
+                                                                                                        name="don_gia"
                                                                                                         value="<?= $item['don_gia'] ?>">
                         </td>
 

@@ -4,8 +4,8 @@ require '../../dao/hang-hoa.php';
 require '../../dao/nguoi_dung.php';
 //-------------------------------//
 extract($_REQUEST);
-var_dump($_REQUEST);
-// die;
+
+//die;
 if (exist_param("form_invoice")) {
     if (isset($_SESSION['user'])) {
         $id = $_SESSION['user'];

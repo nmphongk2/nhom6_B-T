@@ -51,6 +51,7 @@ if (isset($_SESSION['total_cart'])) {
   <div class="dropdown widget-header icontext">
                     <a href="#" class="icon icon-sm rounded-circle border" id="dropdownMenu1" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
+
                         <?php
                         if (isset($_SESSION['user']) && $_SESSION['user']['hinh'] != "") { ?>
                        <img src="<?= $UPLOAD_URL . "/users/" . $_SESSION['user']['hinh'] ?>" class="rounded-circle" width="50" height="50" alt="Avatar"
@@ -112,8 +113,8 @@ if (isset($_SESSION['total_cart'])) {
                 </div>     </div>
                     </div>
                 </div>
-                                   </div> 
-                                </div> 
+                                   </div>
+                        </div>
                                 <!--header top end-->
                                   <!--header middel--> 
                                   <div class="header_middel">
@@ -218,7 +219,9 @@ if (isset($_SESSION['total_cart'])) {
                                                             
                                                             </li>
                                                             <li <?= $name_page == 'Hang_cu' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/shop-fullwidth.php">Hàng Cũ</a></li>
-                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a href="<?= $SITE_URL ?>/trang-chinh/contact.php">Liên Hệ</a></li>
+                                                            <li <?= $name_page == 'Lien_he' ? 'active' : '' ?>><a
+                                                                        href="<?= $SITE_URL ?>/trang-chinh/lien-he.php">Liên
+                                                                    Hệ</a></li>
                                                              
                                                             </li>
                                                            

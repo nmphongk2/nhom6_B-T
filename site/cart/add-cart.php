@@ -37,7 +37,7 @@ if (isset($ma_hh) && $ma_hh > 0) {
             $_SESSION['cart'][$ma_hh]['ma_hh'] = $ma_hh;
             $_SESSION['cart'][$ma_hh]['ten_hh'] = $ten_hh;
             // $_SESSION['cart'][$ma_hh]['hinh'] = $hinh; // Nếu không có trường 'hinh' trong bảng, bạn có thể bỏ qua
-            $_SESSION['cart'][$ma_hh]['gia'] = $gia;
+            $_SESSION['cart'][$ma_hh]['don_gia'] = $don_gia;
             $_SESSION['cart'][$ma_hh]['giam_gia'] = $giam_gia;
 
             $total = array_sum(array_column($_SESSION['cart'], 'so_luong'));
